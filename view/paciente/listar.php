@@ -7,8 +7,8 @@ $pacientes = Paciente::listar();
 ?>
 <main class="container">
     <h1>Lista de Pacientes</h1>
-    <table>
-        <thead>
+    <table class="table table-hover">
+        <thead class="table-primary">
             <tr>
                 <th>Nome</th>
                 <th>CPF</th>

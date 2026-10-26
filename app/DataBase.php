@@ -40,5 +40,19 @@ class DataBase{
         return $this->connection->lastInsertId();
         
     }
+    public function select(){
+        $query = 'select * from '.$this->table;
+        return $this->execute($query);
+    }
 
+}
+public function update($array, $where){
+    $fields = array_keys($array);
+    $binds = array_pad([] ,count(array)), '= ?,';
+    $query = 'update ' .$this->. table. 'set' .implode($binds,$fields). '=? where' .$whare;
+    return $this ->execute($query,array_values($array));
+}
+public function excluir($where){
+    $query = 'delete from '.$this->table. 'where '.$where;
+    return $this->execute($query);
 }
